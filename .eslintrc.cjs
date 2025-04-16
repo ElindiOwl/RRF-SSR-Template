@@ -1,0 +1,58 @@
+module.exports = {
+	env: {
+		browser: true,
+		es2021: true,
+		jest: true,
+		node: true,
+	},
+	extends: [
+		'eslint:recommended',
+		'plugin:react/recommended',
+		'plugin:@typescript-eslint/recommended',
+	],
+	overrides: [],
+	parser: '@typescript-eslint/parser',
+	parserOptions: {
+		ecmaVersion: 'latest',
+		sourceType: 'module',
+	},
+	plugins: ['react', '@typescript-eslint', 'prefer-arrow', 'sort-keys-fix', 'import'],
+	rules: {
+		'@typescript-eslint/no-explicit-any': 'warn',
+		'@typescript-eslint/no-non-null-assertion': 'off',
+		'@typescript-eslint/no-unused-vars': ['error', { 'varsIgnorePattern': '^_' }],
+		'arrow-spacing': 'error',
+		'import/no-cycle': 'error',
+		'import/no-duplicates': 'error',
+		'import/order': ['error', {
+			'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+			'newlines-between': 'always',
+		}],
+		indent: ['warn', 'tab'],
+		'linebreak-style': ['error', 'unix'],
+		'no-console': 'error',
+		'no-const-assign': 'error',
+		'no-undef': 'error',
+		'no-use-before-define': 'error',
+		'no-var': 'error',
+		'prefer-arrow/prefer-arrow-functions': [
+			'error',
+			{
+				classPropertiesAllowed: false,
+				disallowPrototype: true,
+				singleReturnOnly: false,
+			},
+		],
+		'prefer-const': 'error',
+		quotes: ['error', 'single'],
+		'react/jsx-sort-props': ['error', {
+			'callbacksLast': true,
+			'noSortAlphabetically': false,
+			'reservedFirst': true,
+			'shorthandFirst': true,
+		}],
+		'react/prop-types': 'off',
+		'react/react-in-jsx-scope': 'off',
+		'sort-keys-fix/sort-keys-fix': 'error',
+	},
+};
