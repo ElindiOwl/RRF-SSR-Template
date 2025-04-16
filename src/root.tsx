@@ -19,6 +19,7 @@ export const links: Route.LinksFunction = () => [
 	},
 ];
 
+// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function Layout({children}: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
@@ -37,10 +38,12 @@ export function Layout({children}: { children: React.ReactNode }) {
 	);
 }
 
+// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export default function App() {
 	return <Outlet/>;
 }
 
+// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function ErrorBoundary({error}: Route.ErrorBoundaryProps) {
 	let message = 'Oops!';
 	let details = 'An unexpected error occurred.';
