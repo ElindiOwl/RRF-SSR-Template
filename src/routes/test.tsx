@@ -1,10 +1,18 @@
 import {TestPage} from 'pages/Test-Page';
 
-const Test = () => {
+import type {Route} from '+types/test';
+
+/* global fetch */
+export const clientLoader = async () => {
+	const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+	return await res.json()
+}
+
+const Test = ({loaderData}: Route.ComponentProps) => {
 	return (
-		<div>
-			<TestPage/>
-		</div>
+		<>
+			<TestPage body={loaderData[0].body} fetchType={'client'} title={loaderData[0].title}/>
+		</>
 	)
 }
 
