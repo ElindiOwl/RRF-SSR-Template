@@ -32,6 +32,9 @@
       "@/*": [
         "./src/*"
       ],
+      "+types/*": [
+        "./.react-router/types/src/routes/+types/*"
+      ],
       "widgets/*": [
         "./src/widgets/*"
       ],

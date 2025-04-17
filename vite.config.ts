@@ -14,6 +14,10 @@ export default defineConfig({
 		alias: [
 			{find: '@', replacement: path.resolve(__dirname, 'src')},
 			{
+				find: '+types',
+				replacement: path.resolve(__dirname, '.react-router/types/src/routes/+types'),
+			},
+			{
 				find: 'widgets',
 				replacement: path.resolve(__dirname, 'src/widgets'),
 			},
