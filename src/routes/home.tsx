@@ -1,6 +1,5 @@
 import {MainPage} from 'pages/Main-Page';
 
-
 export const meta = () => {
 	return [
 		{title: 'RRF template'},
