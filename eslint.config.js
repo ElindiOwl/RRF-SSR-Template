@@ -53,6 +53,7 @@ export default tseslint.config(
 			'no-undef': 'error',
 			'no-use-before-define': 'error',
 			'no-var': 'error',
+			'object-curly-spacing': ['error', 'always'],
 			'prefer-arrow/prefer-arrow-functions': [
 				'error',
 				{

@@ -1,8 +1,8 @@
 import path from 'path';
-import {fileURLToPath} from 'url';
+import { fileURLToPath } from 'url';
 
-import {defineConfig} from 'vite';
-import {reactRouter} from '@react-router/dev/vite';
+import { defineConfig } from 'vite';
+import { reactRouter } from '@react-router/dev/vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -12,7 +12,7 @@ export default defineConfig({
 	plugins: [reactRouter(), tsconfigPaths()],
 	resolve: {
 		alias: [
-			{find: '@', replacement: path.resolve(__dirname, 'src')},
+			{ find: '@', replacement: path.resolve(__dirname, 'src') },
 			{
 				find: '+types',
 				replacement: path.resolve(__dirname, '.react-router/types/src/routes/+types'),
@@ -29,7 +29,7 @@ export default defineConfig({
 				find: 'shared',
 				replacement: path.resolve(__dirname, 'src/shared'),
 			},
-			{find: 'app', replacement: path.resolve(__dirname, 'src/app')},
+			{ find: 'app', replacement: path.resolve(__dirname, 'src/app') },
 			{
 				find: 'entities',
 				replacement: path.resolve(__dirname, 'src/entities'),
