@@ -1,4 +1,4 @@
-import {MainPage} from 'pages/main';
+import {Page} from 'pages/main';
 
 export const meta = () => {
     return [
@@ -7,12 +7,12 @@ export const meta = () => {
     ];
 };
 
-const Home = () => {
+const Main = () => {
     return (
         <>
-            <MainPage/>
+            <Page/>
         </>
     );
 };
 
-export default Home;
+export default Main;

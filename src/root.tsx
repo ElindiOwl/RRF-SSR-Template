@@ -1,10 +1,12 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration, } from 'react-router';
 import React from 'react';
+import { BaseEntry } from 'app/entries/Base-Entry';
 
 import type { Route } from '.react-router/types/src/+types/root';
 
 import 'app/styles/Normalize.scss';
 import 'app/styles/App.scss';
+
 
 export const links: Route.LinksFunction = () => [
 	{ href: 'https://fonts.googleapis.com', rel: 'preconnect' },
@@ -40,7 +42,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export default function App() {
-	return <Outlet/>;
+	return (
+		<BaseEntry>
+			<Outlet/>
+		</BaseEntry>
+	);
 }
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions

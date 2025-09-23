@@ -1,4 +1,4 @@
-export const MainPage = () => {
+export const Page = () => {
 	return (
 		<div style={{
 			alignItems: 'center',
