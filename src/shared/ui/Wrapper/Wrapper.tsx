@@ -1,6 +1,7 @@
 import type { FC, ReactNode } from 'react';
 import { memo } from 'react';
-import { cn } from 'shared/lib';
+
+import { cn } from '../../lib/utils';
 
 import style from './Wrapper.module.scss';
 
