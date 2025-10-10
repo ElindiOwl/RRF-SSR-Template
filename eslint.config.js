@@ -65,6 +65,7 @@ export default tseslint.config(
 			'@typescript-eslint/no-non-null-assertion': 'off',
 			'@typescript-eslint/no-unused-vars': ['error', { 'varsIgnorePattern': '^_' }],
 			'arrow-spacing': 'error',
+			'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
 			'import/no-cycle': 'error',
 			'import/no-duplicates': 'error',
 			'import/order': ['error', {
